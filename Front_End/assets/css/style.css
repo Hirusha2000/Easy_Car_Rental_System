@@ -30,6 +30,7 @@
 
 /* Hover animation */
 .beautiful-button:hover {
+  color: white;
   background: linear-gradient(to bottom, #005a42, #01d28e);
   animation: button-particles 1s ease-in-out infinite;
   transform: translateY(-2px);
