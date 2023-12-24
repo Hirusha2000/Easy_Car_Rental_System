@@ -32,7 +32,7 @@
             font-size: 24px;
             font-weight: bold;
             text-align: center;
-            color: #008000;
+            color: black;
             margin: 20px;
             padding-left: 25em;
         }
@@ -87,72 +87,81 @@
 
         <li class="nav-item">
             <a class="nav-link " href="adminDashboard.html">
-                <i class="bi bi-grid"></i>
-                <span>Dashboard</span>
+                <i class="bi bi-house-door"></i>
+                <span>HOME</span>
             </a>
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-kanban"></i><span>Manage</span><i class="bi bi-chevron-down ms-auto"></i>
-            </a>
-            <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="adminPages/Reg_UserManage.html">
-                        <i class="bi bi-circle"></i><span>Customer</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="adminPages/DriverManage.html">
-                        <i class="bi bi-circle"></i><span>Driver</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="adminPages/CarManage.html">
-                        <i class="bi bi-circle"></i><span>Car</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <!-- End Forms Nav -->
+            <a class="nav-link collapsed" href="adminPages/CusomerRequest.html" id="myDetailsSection">
+                <i class="bi bi-person"></i>
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-layout-text-window-reverse"></i><span>Details</span><i
-                    class="bi bi-chevron-down ms-auto"></i>
+                <span>CUSTOMER MANAGE</span>
             </a>
-            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="adminPages/PaymentDetails.html">
-                        <i class="bi bi-circle"></i><span>Payment Details</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="adminPages/RentDetails.html">
-                        <i class="bi bi-circle"></i><span>Rent Details</span>
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End View Nav -->
+        </li>
+
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="adminPages/CusomerRequest.html" id="myDetailsSection">
-                <i class="bi bi-kanban"></i>
-                <span>Rent Request</span>
+                <i class="bi bi-key"></i>
+
+
+
+                <span>DRIVER MANAGE</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="adminPages/CusomerRequest.html" id="myDetailsSection">
+                <i class="bi bi-truck"></i>
+
+                <span>CAR MANAGE</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="adminPages/CusomerRequest.html" id="myDetailsSection">
+                <i class="bi bi-clipboard"></i>
+
+                <span>RENT DETAIL</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="adminPages/CusomerRequest.html" id="myDetailsSection">
+                <i class="bi bi-credit-card"></i>
+
+                <span>PAYMENT DETAIL</span>
+            </a>
+        </li>
+
+
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="adminPages/CusomerRequest.html" id="myDetailsSection">
+                <i class="bi bi-envelope"></i>
+
+
+
+                <span>RENT REQUEST</span>
             </a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="adminPages/IncomeDetails.html" id="incomeDetails">
-                <i class="bi bi-kanban"></i>
-                <span>Income Details</span>
+                <i class="bi bi-currency-dollar"></i>
+
+                <span>INCOME DETAILS</span>
             </a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="login.html">
                 <i class="bi bi-box-arrow-in-right"></i>
-                <span>LogOut</span>
+                <span>LOGOUT</span>
             </a>
         </li>
         <!-- End Login Page Nav -->
@@ -180,10 +189,10 @@
 
             <!-- Left side columns -->
             <div class="col-lg-8">
-                <div class="row">
+                <div class="row" >
 
                     <!-- Car Card -->
-                    <div class="col-xxl-4 col-md-6">
+                    <div class="col-xxl-4 col-md-3">
                         <div class="card info-card car-card">
                             <div class="card-body">
                                 <h5 class="card-title">Cars <span>| All Type</span></h5>
@@ -201,7 +210,7 @@
                     <!-- End Car Card -->
 
                     <!-- Available Car Card -->
-                    <div class="col-xxl-4 col-md-6">
+                    <div class="col-xxl-4 col-md-3">
                         <div class="card info-card car-card">
                             <div class="card-body">
                                 <h5 class="card-title">Available Cars <span>| Today</span></h5>
@@ -219,7 +228,7 @@
                     <!-- End Car Card -->
 
                     <!-- Reserved Car Card -->
-                    <div class="col-xxl-4 col-md-6">
+                    <div class="col-xxl-4 col-md-3">
                         <div class="card info-card car-card">
                             <div class="card-body">
                                 <h5 class="card-title">Reserved Cars <span>| Today</span></h5>
@@ -237,7 +246,7 @@
                     <!-- End Car Card -->
 
                     <!-- Drivers Card -->
-                    <div class="col-xxl-4 col-md-6">
+                    <div class="col-xxl-4 col-md-3">
                         <div class="card info-card driver-card">
                             <div class="card-body">
                                 <h5 class="card-title">Driver <span>| All Type</span></h5>
@@ -258,7 +267,7 @@
                     <!-- End Drivers Card -->
 
                     <!-- Available Drivers Card -->
-                    <div class="col-xxl-4 col-md-6">
+                    <div class="col-xxl-4 col-md-3">
                         <div class="card info-card driver-card">
                             <div class="card-body">
                                 <h5 class="card-title">Available Driver <span>| Today</span></h5>
@@ -277,7 +286,7 @@
                     <!-- End Drivers Card -->
 
                     <!-- UnAvailable Drivers Card -->
-                    <div class="col-xxl-4 col-md-6">
+                    <div class="col-xxl-4 col-md-3">
                         <div class="card info-card driver-card">
                             <div class="card-body">
                                 <h5 class="card-title">UnAvailable Driver <span>| Today</span></h5>
@@ -296,7 +305,7 @@
                     <!-- End Drivers Card -->
 
                     <!-- Customers Card -->
-                    <div class="col-xxl-4 col-xl-6">
+                    <div class="col-xxl-4 col-xl-3">
                         <div class="card info-card customers-card">
                             <div class="card-body">
                                 <h5 class="card-title">Customers <span>| All Type</span></h5>
@@ -316,7 +325,7 @@
                     <!-- End Customers Card -->
 
                     <!-- Maintain Cars Card -->
-                    <div class="col-xxl-4 col-xl-6">
+                    <div class="col-xxl-4 col-xl-3">
                         <div class="card info-card maintain-card">
                             <div class="card-body">
                                 <h5 class="card-title">Maintain Cars <span>| Today</span></h5>
@@ -334,7 +343,7 @@
                     <!-- End Maintain Cars Card -->
 
                     <!-- Under Maintain  Card -->
-                    <div class="col-xxl-4 col-xl-6">
+                    <div class="col-xxl-4 col-xl-3">
                         <div class="card info-card maintain-card">
                             <div class="card-body">
                                 <h5 class="card-title">Under Maintain Cars <span>| Today</span></h5>
@@ -352,7 +361,7 @@
                     <!-- End Under Maintain Card -->
 
                     <!-- Booking  Card -->
-                    <div class="col-xxl-4 col-xl-6">
+                    <div class="col-xxl-4 col-xl-3">
                         <div class="card info-card booking-card">
                             <div class="card-body">
                                 <h5 class="card-title">Booking<span>| All Type</span></h5>
@@ -370,7 +379,7 @@
                     <!-- End Booking Card -->
 
                     <!-- Booking Pending Today Card -->
-                    <div class="col-xxl-4 col-xl-6">
+                    <div class="col-xxl-4 col-xl-3">
                         <div class="card info-card booking-card">
                             <div class="card-body">
                                 <h5 class="card-title">Booking Pending<span>| Today</span></h5>
@@ -388,7 +397,7 @@
                     <!-- End Booking Today Card -->
 
                     <!-- Booking Pending Active Card -->
-                    <div class="col-xxl-4 col-xl-6">
+                    <div class="col-xxl-4 col-xl-3">
                         <div class="card info-card booking-card">
                             <div class="card-body">
                                 <h5 class="card-title">Booking Active <span>| Today</span></h5>
