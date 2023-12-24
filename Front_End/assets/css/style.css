@@ -28,6 +28,12 @@
   /* Smooth transition */
 }
 
+
+#about.tco-section.ftco-about {
+
+  padding: 20px!important;
+}
+
 /* Hover animation */
 .beautiful-button:hover {
   color: white;
@@ -9033,6 +9039,7 @@ h1, h2, h3, h4, h5,
         opacity: 0; }
 
 .ftco-about {
+  padding: 70px;
   position: relative;
   z-index: 0; }
   .ftco-about:after {
