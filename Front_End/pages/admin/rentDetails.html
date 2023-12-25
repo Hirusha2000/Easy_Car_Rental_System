@@ -172,28 +172,60 @@
 <!-- End Sidebar-->
 
 <!-- ======= Main ======= -->
+
 <main id="main" class="main">
 
-    <div class="pageTitle" id="pageOne">
-        <h1>Admin Dashboard</h1>
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="adminDashboard.html">Home</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
-            </ol>
-        </nav>
+    <!-- ======= Rent Manage ======= -->
+    <div class="pageTitle" id="pageFour">
+        <h1>Manage</h1>
+        <section class="container-fluid mt-3" id="manageRent">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../adminDashboard.html">Home</a></li>
+                    <li class="breadcrumb-item active">Details / Rent Details</li>
+                </ol>
+            </nav>
+
+            <div class="row mt-3">
+                <div class="card info-card">
+                    <!-- View Rent Details Table Start -->
+                    <div class="row mt-3 mt-md-2 mt-lg-4 justify-content-around"
+                         style="height: 490px;">
+                        <div class="col-11 justify-content-around sectionBorder"
+                             style="height: 460px; background: white">
+                            <div class="table-responsive customerTableDiv overflow-auto "
+                                 style="height: 470px;">
+                                <table class="table text-nowrap table-light table-striped table-bordered table-hover">
+                                    <thead class="text-dark table-danger text-center  table-bordered">
+                                    <tr>
+                                        <th scope="col">Rent ID</th>
+                                        <th scope="col">Car ID</th>
+                                        <th scope="col">User ID</th>
+                                        <th scope="col">Driver ID</th>
+                                        <th scope="col">Driver Select</th>
+                                        <th scope="col">Rent Request</th>
+                                        <th scope="col">Pick Date</th>
+                                        <th scope="col">Pick Time</th>
+                                        <th scope="col">Return Time</th>
+                                        <th scope="col">Return Date</th>
+                                        <th scope="col">Location</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="rentAllDetails"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- View Car Details Table End -->
+                </div>
+            </div>
+        </section>
     </div>
-    <!-- End Page Title -->
-    <section class="section dashboard">
-        <div class="row">
+    <!-- End Car Manage -->
 
-            <!-- Left side columns -->
-
-            ***********************
-
-        </div>
-    </section>
 </main>
+
+
 <!-- End #main -->
 
 <!-- ======= Footer ======= -->
