@@ -1,23 +1,30 @@
 
+
 let baseUrlLogin = "http://localhost:8080/Back_End_war/";
 
-$("#signInbtn").on('click',function (){
+
+/**
+ * load all customers Method
+ * */
+
+$("#btnLogin").on('click', function () {
     login();
 });
 
 
 function login() {
-    let loginUserName = $("#userName").val();
+    let loginRole_Type = $("#role_Type").val();
+    let loginUserName = $("#user_Name").val();
     let loginPassword = $("#password").val();
 
     $.ajax({
-        url: baseUrlLogin + "signInForm",
+        url: baseUrlLogin + "loginForm",
         contentType: "application/json",
         dataType: "json",
         success: function (res) {
             for (var login of res.data) {
-                if ( loginUserName === login.userName && loginPassword === login.password) {
-                    if (loginUserName === "Driver" && loginPassword === driverId) {
+                if (loginRole_Type === login.role_Type && loginUserName === login.user_Name && loginPassword === login.password) {
+                    if (loginRole_Type === "DRIVER" && loginUserName === login.user_Name && loginPassword === login.password) {
                         $.ajax({
                             url: baseUrlLogin + "loginForm/?username=" + loginUserName + "&password=" + loginPassword,
                             data:res.data,
@@ -26,7 +33,7 @@ function login() {
                             }
                         })
                         window.location.href = 'driverDashboard.html';
-                    } else if (loginUserName === login.userName && loginPassword === login.password) {
+                    } else if (loginRole_Type === "REGISTERED_USER" && loginUserName === login.user_Name && loginPassword === login.password) {
                         $.ajax({
                             url: baseUrlLogin + "loginForm/?username=" + loginUserName + "&password=" + loginPassword,
                             data:res.data,
@@ -35,15 +42,12 @@ function login() {
                             }
                         });
                         window.location.href = 'reg_UserDashboard.html';
-
-
-                    } else if (loginUserName === "admin"  && loginPassword === "1234") {
+                    } else if (loginRole_Type === "ADMIN" && loginUserName === login.user_Name && loginPassword === login.password) {
                         window.location.href = 'adminDashboard.html';
                     }
                     return;
                 }
             }
-
         }
     });
 }
