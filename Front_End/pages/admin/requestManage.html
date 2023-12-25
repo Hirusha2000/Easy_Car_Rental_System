@@ -174,26 +174,245 @@
 <!-- ======= Main ======= -->
 <main id="main" class="main">
 
-    <div class="pageTitle" id="pageOne">
-        <h1>Admin Dashboard</h1>
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="adminDashboard.html">Home</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
-            </ol>
-        </nav>
+    <!-- ======= Car Manage ======= -->
+    <div class="pageTitle" id="pageFour">
+        <h1>Manage</h1>
+        <section class="container-fluid mt-3" id="manageCar">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../adminDashboard.html">Home</a></li>
+                    <li class="breadcrumb-item active">Rent Request</li>
+                </ol>
+            </nav>
+
+            <div class="row mt-3">
+                <!-- start content-->
+                <div class="row">
+                    <!-- start col-->
+                    <div class="col-12">
+                        <!-- start card-->
+                        <div class="card info-card">
+                            <!-- start card-body -->
+                            <div class="card-body">
+                                <!-- start row -->
+                                <div class="row mt-3">
+                                    <!-- start col-->
+                                    <div class="col-xl-12">
+                                        <!-- start booking request details -->
+                                        <form id="customerRequestForm" class="row mb-3">
+                                            <section id="secResponseDetails" class="row mx-0">
+                                                <div class="mb-2 col-xl-3 col-sm-6">
+                                                    <label class="form-label" for="requestRentId">Rent ID<span
+                                                            class="text-danger"></span></label>
+                                                    <input class="form-control mt-1" id="requestRentId" readonly
+                                                           name="rent_Id"
+                                                           placeholder="Rent ID" type="text">
+                                                </div>
+                                                <div class="mb-2 col-xl-3 col-sm-6">
+                                                    <label class="form-label" for="driverId">Driver ID<span
+                                                            class="text-danger"></span></label>
+                                                    <select aria-label="Default select example" class="form-select m-1"
+                                                            id="driverId" name="driverId"
+                                                            placeholder="Driver Id"></select>
+                                                </div>
+                                                <div class="mb-2 col-xl-3 col-sm-6">
+                                                    <label class="form-label" for="userID">User ID<span
+                                                            class="text-danger"></span></label>
+                                                    <input class="form-control mt-1" id="userID" readonly
+                                                           name="useID"
+                                                           placeholder="User ID" type="text">
+                                                </div>
+                                                <div class="mb-2 col-xl-3 col-sm-6">
+                                                    <label class="form-label" for="requestState">Request State<span
+                                                            class="text-danger"></span></label>
+                                                    <input class="form-control mt-1" id="requestState" readonly
+                                                           name="requestState"
+                                                           placeholder="Request State" type="text">
+                                                </div>
+
+                                            </section>
+                                        </form>
+                                        <!-- end booking request details -->
+
+                                        <!-- start button content-->
+                                        <div class="mb-3 mt-2 d-grid gap-1 d-md-flex justify-content-md-end">
+                                            <button type="button" class="btn btn-success btn m-1 p-2" id="btnAccept">
+                                                Accept
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn m-1 p-2" id="btnReject">
+                                                Reject
+                                            </button>
+                                            <button type="button" class="btn btn-primary m-1 p-2" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal">
+                                                Payment
+                                            </button>
+                                        </div>
+                                        <!-- end button content-->
+                                    </div>
+                                    <!-- end col-->
+                                </div>
+                                <!-- end row -->
+                            </div>
+                            <!-- end card-body -->
+                        </div>
+                        <div class="card info-card">
+                            <!-- start searchBar -->
+                            <div class="search-bar mt-4 ms-4">
+                                <div class="search-form d-flex align-items-center">
+                                    <input type="search" name="car_Id" id="search_Id" placeholder="Search"
+                                           title="Enter search keyword">
+                                    <button type="button" title="Search"><i class="bi bi-search"></i></button>
+                                </div>
+                            </div>
+                            <!-- end searchBar -->
+
+                            <!-- start request table content-->
+                            <div class="row mt-1 mt-md-2 mt-lg-4 justify-content-around" style="height: 320px;">
+                                <div class="col-11 justify-content-around sectionBorder"
+                                     style="height: 280px; background: white">
+                                    <div class="table-responsive customerTableDiv overflow-auto "
+                                         style="height: 300px;">
+                                        <table class="text-nowrap table table-light table-striped table-bordered table-hover">
+                                            <thead class="text-dark table-danger text-center  table-bordered sticky-top">
+                                            <tr>
+                                                <th scope="col">Rent ID</th>
+                                                <th scope="col">Car ID</th>
+                                                <th scope="col">User ID</th>
+                                                <th scope="col">Driver ID</th>
+                                                <th scope="col">Driver Select</th>
+                                                <th scope="col">Rent Request</th>
+                                                <th scope="col">Pick Date</th>
+                                                <th scope="col">Pick Time</th>
+                                                <th scope="col">Return Time</th>
+                                                <th scope="col">Return Date</th>
+                                                <th scope="col">Location</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="retManage"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end request table content-->
+                        </div>
+                        <!-- end card-->
+                    </div>
+                    <!-- end col-->
+                </div>
+
+            </div>
+        </section>
     </div>
-    <!-- End Page Title -->
-    <section class="section dashboard">
-        <div class="row">
+    <!-- End Car Manage -->
 
-            <!-- Left side columns -->
-
-            ***********************
-
+    <!-- Modal -->
+    <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Payment Rent</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="PayementToRent" action="payment" class="row mb-3">
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="paymentID">Payement ID<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="paymentID" readonly
+                                   name="paymentID"
+                                   placeholder="Payment ID" type="text">
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="rentId">Rent ID<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="rentID" readonly
+                                   name="rentID"
+                                   placeholder="Rent ID" type="text">
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="paymentType">Payment Type<span
+                                    class="text-danger"></span></label>
+                            <select aria-label="Default select example" class="form-select m-1"
+                                    id="paymentType" name="paymentType" placeholder="Payment Type">
+                                <option>--Select Type--</option>
+                                <option value="NOMARL">NOMARL</option>
+                                <option value="LOST_DAMAGE">LOST_DAMAGE</option>
+                            </select>
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="userID">Payment Date<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="date"
+                                   name="date" readonly
+                                   placeholder="Payment Date" type="text">
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="time">Payment Time<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="time"
+                                   name="time" readonly
+                                   placeholder="Payment Time" type="text">
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="rentFee">Car Fee<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="rentFee"
+                                   name="rentFee" readonly
+                                   placeholder="Rent Fee" type="text">
+                            <!--    <select aria-label="Default select example" class="form-select m-1"
+                                        id="rentFee" name="rentFee" placeholder="Car Fee Type">
+                                    <option>&#45;&#45;Select Type&#45;&#45;</option>
+                                </select>-->
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="total">Days<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="days"
+                                   name="days"
+                                   placeholder="Days" type="text">
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="lostDamage">Lost Damage<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="lostDamage"
+                                   name="lostDamage"
+                                   placeholder="Lost Damage" type="text">
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="mileage">Mileage<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="mileage"
+                                   name="mileage"
+                                   placeholder="Mileage" type="text">
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="driverFee">Driver Fee<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="driverFee"
+                                   name="driverFee"
+                                   placeholder="Driver Fee" type="text">
+                        </div>
+                        <div class="mb-2 col-xl-3 col-sm-6">
+                            <label class="form-label" for="total">Total<span
+                                    class="text-danger"></span></label>
+                            <input class="form-control mt-1" id="total"
+                                   name="total" readonly
+                                   placeholder="Total" type="text">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" form="PayementToRent" id="btnPay">Pay</button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 </main>
+
+
+
 <!-- End #main -->
 
 <!-- ======= Footer ======= -->
