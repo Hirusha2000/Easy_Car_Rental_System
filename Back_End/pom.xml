@@ -14,7 +14,6 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <dependencies>
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
@@ -96,6 +95,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 
 </project>
