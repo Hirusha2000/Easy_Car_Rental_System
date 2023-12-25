@@ -1,4 +1,4 @@
-package com.car_rent.config;
+package com.easy.car_rental.config;
 
 import com.easy.car_rental.advisor.AppWideExceptionHandler;
 import org.springframework.context.annotation.Bean;

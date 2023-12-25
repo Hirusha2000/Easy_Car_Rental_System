@@ -1,4 +1,4 @@
-package com.car_rent.controller;
+package com.easy.car_rental.controller;
 
 import com.easy.car_rental.dto.CustomDTO;
 import com.easy.car_rental.dto.PaymentDTO;

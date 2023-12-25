@@ -1,4 +1,4 @@
-package com.car_rent;
+package com.easy.car_rental;
 
 import com.easy.car_rental.config.WebAppConfig;
 import com.easy.car_rental.config.WebRootConfig;

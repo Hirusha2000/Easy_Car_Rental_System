@@ -1,4 +1,4 @@
-package com.car_rent.advisor;
+package com.easy.car_rental.advisor;
 
 import com.easy.car_rental.util.ResponseUtil;
 import org.springframework.http.HttpStatus;

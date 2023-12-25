@@ -1,4 +1,4 @@
-package com.car_rent.config;
+package com.easy.car_rental.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
